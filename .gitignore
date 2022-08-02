@@ -1,0 +1,7 @@
+libft-war-machine/
+*.o
+main.c
+a.out
+.vscode/
+.DS_Store
+tester.sh
