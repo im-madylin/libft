@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:56:12 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/02 20:25:57 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 16:26:27 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ char	**ft_split(char const *s, char c)
 	}
 	i = 0;
 	if (!input_word(result, s, c, i))
-		return (0);
+		return (NULL);
 	return (result);
 }

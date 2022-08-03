@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:38:08 by hahlee            #+#    #+#             */
-/*   Updated: 2022/07/19 15:54:01 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 14:17:33 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,9 @@ int	ft_atoi(const char *str)
 	}
 	while ((str[i] >= '0' && str[i] <= '9') && result <= max)
 		result = result * 10 + (str[i++] - '0');
-	if (result > max && sign == 1)
+	if (result >= max && sign == 1)
 		return (-1);
-	else if (result >= max && sign == -1)
+	else if (result > max && sign == -1)
 		return (0);
 	return (result * sign);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// int main(){
-// 	char str[] = "   --9223372036854775800000000";
-// 	printf("%d\n", ft_atoi(str));
-// 	printf("%d\n", atoi(str));
-
-// }

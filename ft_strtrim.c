@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 19:31:23 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/02 20:27:53 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 16:49:41 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = len - 1;
 	while (ft_strchr(set, s1[i]))
 		i--;
-	end = i;
-	result = (char *)malloc(end - start + 2);
+	end = i + 1;
+	result = (char *)malloc(end - start + 1);
 	if (result == NULL)
 		return (NULL);
-	ft_strlcpy(result, s1 + start, end - start + 2);
+	ft_strlcpy(result, s1 + start, end - start + 1);
 	return (result);
 }

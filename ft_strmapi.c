@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 17:01:31 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/02 20:27:06 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 16:36:42 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		result[i] = f(i, s[i]);
 		i++;
 	}
-	result[i] = 0;
+	result[i] = '\0';
 	return (result);
 }

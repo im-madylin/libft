@@ -6,7 +6,7 @@
 #    By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 16:14:21 by hahlee            #+#    #+#              #
-#    Updated: 2022/08/02 20:16:06 by hahlee           ###   ########.fr        #
+#    Updated: 2022/08/03 17:03:50 by hahlee           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,16 +25,13 @@ bonus : $(NAME)
 %.o: %.c
 		$(CC) $(CFLAGS) $< -o $@
 
-# ifeq (, $(findstring bonus, $(MAKECMDGOALS)))
-# $(NAME) : $(OBJS)
-# 	ar -cr $@ $^
-# else
-# $(NAME) : $(OBJS) $(BONUS_OBJS)
-# 	ar -cr $@ $^
-# endif
-
+ifeq (, $(findstring bonus, $(MAKECMDGOALS)))
+$(NAME) : $(OBJS)
+	ar -cr $@ $^
+else
 $(NAME) : $(OBJS) $(BONUS_OBJS)
 	ar -cr $@ $^
+endif
 
 clean :
 		rm -rf $(OBJS) $(BONUS_OBJS)

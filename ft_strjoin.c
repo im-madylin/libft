@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:22:51 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/02 20:26:33 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 16:29:08 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 
 	if (!s1 || !s2)
-		return (0);
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	result = (char *)malloc(s1_len + s2_len + 1);

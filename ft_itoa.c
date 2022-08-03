@@ -6,7 +6,7 @@
 /*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 16:08:26 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/02 17:18:21 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/08/03 15:00:37 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	result = (char *)malloc(sizeof(char) * (i + 1));
 	if (result == NULL)
 		return (NULL);
-	result[i--] = 0;
+	result[i--] = '\0';
 	if (num < 0)
 	{
 		result[0] = '-';
