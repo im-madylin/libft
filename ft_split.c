@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hahlee <hahlee@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: hahlee <hahlee@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 21:56:12 by hahlee            #+#    #+#             */
-/*   Updated: 2022/08/03 16:26:27 by hahlee           ###   ########.fr       */
+/*   Updated: 2022/11/28 12:51:13 by hahlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	result = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (result == NULL)
-	{
-		free(result);
 		return (NULL);
-	}
 	i = 0;
 	if (!input_word(result, s, c, i))
 		return (NULL);
